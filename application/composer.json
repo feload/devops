@@ -1,0 +1,6 @@
+{
+    "name": "felipe/devops",
+    "require": {
+        "predis/predis": "^1.1"
+    }
+}

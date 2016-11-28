@@ -1,0 +1,17 @@
+version: "2"
+services:
+    application:
+        build: .
+        ports:
+            - "8888:80"
+        links:
+            - mysql:mysql
+        volumes:
+            - ./application:/var/www/html
+        depends_on:
+            - mysql
+    mysql:
+        image: mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=application
